@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="avatar.png">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson 23</title>
+</head>
+<body>
+   <div class="wrapper">
+     <header class="header">
+      <h1>Основи JavaScript</h1>
+
+      </header>
+      <main class="page">
+         <div class="page__container">
+            <article class="page__block">
+               <h2>Домашка №1  JS  "Оператори" </h2>
+               <h3>//варіант 1</h3>
+               <p>помилка - виконано додавання рядків, результат був очікуваний на додавання чисел</p>
+               <mark>console.log('35' + - "22"); //35-22</mark>
+
+               <h3>//варіант 3</h3>
+               <p>помилка - інкримент має бути примінений до змінної</p> 
+               <mark>console.log('558' > 22++); //помилка error</mark>
+               <h3>//варіант 4</h3>
+               <p>помилка - очікуваний результат 1 не повертає, повертає 0</p>
+               <mark>let userCounter = 0;
+               let newUsers = userCounter++;
+               console.log(newUsers);</mark>
+
+               <h3>//варіант 5</h3>
+               <p>помилка - так як, оба варіанти true, тому зупиниться на першому значенні</p>
+               <mark>console.log(!false && 11 || 18 && !''); // 11</mark>
+               <h3>//варіант 6</h3>
+               <p>оператор ?? - повертає аргумент, якщо аргумент - null або undefined , то повертає другий аргумент</p>
+               <mark>console.log(name ?? "без імені"); // 0</mark>
+            </article>
+
+            <article class="page__block">
+               <h2> Домашка №2  JS "Умовні оператори"</h2>
+               <h3>//варіант 1</h3>
+               <p>помилка - при строгому дорівнює , не відбуваеться перетворення операндів різних типів в оператори чисел, зрівнюються різні оператори</p>
+               <mark>if (1 === "1") {
+               // console.log('Істина!');
+               // } else {
+               // console.log('Брехня!');
+               // } // Брехня!</mark>
+               <h3>//варіант 2 </h3>
+              <p>вірно</p>
+               <mark>if (5 == "5") {
+               console.log('Істина!');
+               } else {
+               console.log('Брехня!');
+               }</mark>
+               <h3>//варіант 3 </h3>
+               <p>вірно</p>
+               <mark>let message = (92 > '11' && 58 < 100) ? `Істина!` : `Брехня!`; console.log(message);</mark>
+               <h3>//варіант 4</h3>
+               <p>вірно</p>
+               <mark>if (0) {
+               console.log('Брехня!');
+               } else if ('') {
+               console.log('Істина!');
+               }</mark>
+            </article>
+            <article class="page__block">
+               <h2> Домашка №3  JS  "Цикли while і for"</h2>
+               <h3>//варіант 1</h3>
+               <p>вивести у консоль числа від 1 до 5</p>
+               <div class="page__image">
+                  <img src="img/while.png" height="240" alt="image">
+               <img src="img/for.png" height="240" alt="image">
+               </div>
+               
+               <h3>//варіант 2</h3>
+               <p>останній рузультат буде 1</p>
+               <mark>let num = 8;
+               while (num) {
+               console.log(num);
+               num--
+               }</mark>
+               <h3>//варіант 3</h3>
+               <p>переписати на while</p>
+               <mark>let num = 0;
+                  while (num < 3) { console.log(`Число: ${num}`); num++ } </mark>
+               <h3>//варіант 3</h3>
+               <p>зупинити роботу цикла №1 , коли size = 1 </p>
+               <mark>firstfor:for (let num = 0; num < 2; num++) { for (let size=0; size < 2; size++) { if (size == 1) { break firstfor; }
+                  console.log(size); } } </mark>
+            </article>
+            <article class="page__block">
+               <h2> Домашка №4 JS "Числа"</h2>
+               <h3>//задача 1</h3>
+               <p>вивести вірне значення округлення числа</p>
+               <mark>let sourseNum = 1.005 + Number.EPSILON;
+               let numOne = Math.round(sourseNum * 100) / 100; 
+               console.log(numOne); // 1.01</mark>
+            
+               <h3>//задача 2</h3>
+               <p>перетворити рядок у число</p>
+               <mark>let value = "135.58px"
+               let value = parseFloat("135.58px");
+               console.log(value);
+               console.log(typeof value);</mark>
+
+               <h3>//задача 3</h3>
+               <p>побудувати вірну умову</p>
+               <mark>let value = 58 + "Фрилансер";
+               if (value == NaN);
+               console.log(Number(value));
+               console.log(isNaN(value));</mark>
+               <h3>//задача 4</h3>
+               <p>знайти максимальне число </p>
+               <mark>console.log(Math.max(10, 58, 39, -150, 0)); //58</mark>
+               <h3>//задача 5</h3>
+               <p>округлити число 58.858 до 58 </p>
+               <mark>console.log(Math.floor(58.858)); //58</mark>
+            </article>
+            <article class="page__block">
+               <h2> Домашка №5 JS "Рядки"</h2>
+               <h3>//задача 1</h3>
+               <p>перевірити на вірність - "Привіт! Я фрілансер"</p>
+               <mark>let fls = "фрілансер";
+               let text = 'Привіт! Я ${fls}';
+               console.log(text); </mark>
+              <p>помилка - не вірні лапки</p>
+            
+               <h3>//задача 2</h3>
+               <p>вивести букву "н"</p>
+               <mark>let text = "фрілансер";
+               console.log(text[5]);</mark>
+            
+               <h3>//задача 3</h3>
+               <p>перевірка на очікуваний результат "579"</p>
+               <mark>let value = 58 + "Фрилансер";
+                  let text = 123 + "456";
+                  console.log(text);//123456</mark>
+                  <p>помилка - відбулось додавання рядків, а не чисел</p>
+               <h3>//задача 4</h3>
+               <p>перевести рядок у верхній регістр </p>
+               <mark>let text = 'фрілансер';
+               console.log(text.toUpperCase());</mark>
+               <h3>//задача 5</h3>
+               <p>вивести підрядок "лан" </p>
+               <mark>console.log(text.slice(3, 6));</mark>
+               <h3>//задача 6</h3>
+               <p>true або false </p>
+               <mark>let text = 'фрілансер';
+               // console.log(text.includes('лан', 4)); // false // true - ('лан', 3)</mark>
+            </article>
+         </div>
+      </main>
+      <footer class="footer">
+      </footer>
+   </div>
+   <script src="js/script.js">
+     
+   </script>
+</body>
+</html>

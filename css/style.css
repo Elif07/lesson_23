@@ -1,0 +1,100 @@
+ @import url(https://fonts.googleapis.com/css?family=Lato:regular,700,900&display=swap);
+
+ body {
+     font-family: "Lato";
+     color: #424551;
+     /* font-size: 16px; за замовчуванням */
+ }
+ 
+ .wrapper {
+     overflow: hidden;
+     min-width: 100%;
+     position: relative;
+
+     display: flex;
+     flex-direction: column;
+ }
+ .wrapper > main {
+     flex-grow: 1;
+ }
+ /*----------------------------------------*/
+ [class*="__container"]{
+     max-width: 1260px;
+     margin: 0 auto;
+     padding-left: 15px;
+     padding-right: 15px;
+ }
+/*-------------------------------------------------*/
+.wrapper {}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 50px 15px;
+    font-size: 46px;
+    margin-bottom: 15px;
+    background: #7a7b84;
+    border: solid 1px rgb(103, 101, 101);
+    box-shadow: 0px 13px 32px -7px rgba(26, 20, 20, 0.78);
+    color: aliceblue;
+    border-radius: 15px;
+    transition: all 0.5s ease 0s;
+}
+.header:hover {
+transform: scale(1.1);
+}
+
+.page {
+    background: #f9f9fc;
+}
+
+.page__container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.page__block {
+    background-color: rgb(210, 213, 212);
+    border-radius: 15px;
+    padding: 3%;
+    border: solid 1px rgb(103, 101, 101);
+    box-shadow: 0px 13px 32px -7px rgba(26, 20, 20, 0.78);
+    transition: all 0.5s ease 0s;
+}
+.page__block:hover {
+    transform: scale(1.05);
+}
+.page__image {
+
+overflow: hidden;
+  display: flex; 
+  flex-wrap: wrap;
+ gap: 15px;
+  
+}
+img {
+    border-radius: 15px;
+    box-shadow: 0px 13px 32px -7px rgba(26, 20, 20, 0.78);
+    opacity: 0.9;
+    max-height: 240px;
+   width: 310px;
+}
+
+.page__block h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.page__block h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    text-decoration: underline;
+}
+.page__block p {
+    margin-bottom: 8px; 
+    font-size: 18px;
+}
+.footer {}
